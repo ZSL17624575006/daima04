@@ -1,0 +1,4 @@
+include ':mylibrary'
+include ':mvplibrary'
+include ':app'
+rootProject.name = "daima04"

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_main_homr"
+        android:icon="@drawable/main_home_img"
+        android:title="首页"/>
+    <item android:id="@+id/menu_main_special"
+        android:icon="@drawable/main_special_img"
+        android:title="专题"/>
+    <item android:id="@+id/menu_main_classify"
+        android:icon="@drawable/main_classify_img"
+        android:title="分类"/>
+    <item android:id="@+id/menu_main_shopping"
+        android:icon="@drawable/main_shopping_img"
+        android:title="购物车"/>
+    <item android:id="@+id/menu_main_mine"
+        android:icon="@drawable/main_mine_img"
+        android:title="我的"/>
+</menu>
