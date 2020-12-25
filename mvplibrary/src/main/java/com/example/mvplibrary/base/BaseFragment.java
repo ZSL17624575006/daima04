@@ -9,8 +9,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
+
 public abstract class BaseFragment<P extends BasePresenter> extends Fragment implements BaseView {
     public P presenter;
+    private Unbinder bind;
 
     @Nullable
     @Override
@@ -22,7 +27,8 @@ public abstract class BaseFragment<P extends BasePresenter> extends Fragment imp
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        if(presenter != null){
+        bind = ButterKnife.bind(this, view);
+        if(presenter == null){
             presenter = getPresenter();
             presenter.attachView(this);
         }
